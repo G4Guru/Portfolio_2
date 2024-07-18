@@ -1,0 +1,911 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root{
+    --main-color: #BDB7E9;
+    --text-color: #FFF;
+    --bg-color: #080808;
+    --second-bg-color: #151515;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+::-webkit-scrollbar{
+    width: 1rem;
+    height: 10rem;
+}
+::-webkit-scrollbar-track{
+    color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    color: var(--main-color);
+}
+html{
+    font-size: 63.5%;
+}
+body{
+    background-color: var(--bg-color);
+}
+
+/* =============== HEADER =============== */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+}
+.logo{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.logo span{
+    color: var(--main-color);
+    text-transform: capitalize;
+}
+.header .navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 0 1rem;
+}
+.header .navbar a#Home{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+
+/* =============== HOME =============== */
+section{
+    padding: 5rem 5%;
+}
+.home{
+    min-height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+.home .content{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
+}
+.home .content h1{
+    font-size: 4rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.home .content h1 span{
+    color: var(--main-color);
+}
+.home .content h3{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.home .content p{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    line-height: 1.5;
+    width: 50rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+.home .content .flex-btn{
+    display: inline;
+}
+.home .content .flex-btn .btn{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+}
+.home .content .flex-btn .btn .hire{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+}
+.home .content .flex-btn .btn:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+.home .content .icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+.home .content .icons i{
+    color: var(--main-color);
+    font-size: 2rem;
+    border: .2rem solid var(--main-color);
+    padding: 1rem;
+    border-radius: 50%;
+}
+.home .content .icons i:hover{
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+.home img{
+    border-radius: 50%;
+    height: 45rem;
+    width: 45rem;
+    object-fit: cover;
+    box-shadow: 0 0 2.5rem var(--main-color);
+}
+.home img:hover{
+    box-shadow: 0 0 2.5rem var(--main-color), 0 0 5rem var(--main-color), 0 0 10rem var(--main-color);
+}
+.text-animation{
+    font-size: 2rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    min-width: 28rem;
+    font-weight: 600;
+}
+.text-animation span{
+    position: relative;   
+}
+.text-animation span::before{
+    content: 'Web Developer';
+    color: var(--main-color);
+    animation: words 20s infinite;
+}
+.text-animation span::after{
+    content: '';
+    background-color: var(--bg-color);
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid var(--bg-color);
+    right: -8px;
+    animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid var(--main-color);
+    }
+}
+@keyframes words{
+    0%,
+    20%{
+        content: 'Front-End Developer';
+    }
+    21%,
+    40%{
+        content: 'Web Developer';
+    }
+    41%,
+    60%{
+        content: 'WordPress';
+    }
+    61%,
+    80%{
+        content: 'Leads Generation';
+    }
+    81%,
+    100%{
+        content: 'E-commerce';
+    }
+}
+@keyframes typing{
+    10%,
+    15%,
+    30%,
+    35%,
+    50%,
+    55%,
+    70%,
+    75%,
+    90%,
+    95%{
+        width: 0;
+    }
+    5%,
+    20%,
+    25%,
+    40%,
+    45%,
+    60%,
+    65%,
+    80%,
+    85%{
+        width: calc(100% + 8px);
+    }
+}
+.menu i{
+    color: var(--white);
+    font-size: 2rem;
+    display: none;
+}
+.menu i:hover{
+    color: var(--main-color);
+    text-shadow: .1rem .5rem 1rem var(--main-color);
+}
+
+/* =============== About =============== */
+.about {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about h1 {
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about h1 .icon-about {
+    margin-right: 10px;
+}
+
+.about h1 span {
+    color: var(--main-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.about-left, .about-right {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image {
+    border-radius: 10px;
+    height: 45rem;
+    width: 45rem;
+    object-fit: cover;
+    box-shadow: 0 0 2.5rem var(--main-color);
+}
+
+.about-image:hover {
+    box-shadow: 0 0 2.5rem var(--main-color), 0 0 5rem var(--main-color), 0 0 10rem var(--main-color);
+}
+
+.about-right h3 {
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.about-right h5 {
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.about-right p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.icon-email, .icon-location {
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+/* =============== SKILLS =============== */
+.skills {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills h1 {
+    margin-bottom: 20px;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.skills h1 span {
+    color: var(--main-color);
+}
+
+.skills-container {
+    width: 80%;
+    background: #9b96bd;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0 0 2.5rem var(--main-color);
+}
+
+.skill-card {
+    width: 15%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.skill-card img {
+    width: 75%;
+    height: 10vh;
+    border-radius: 5px;
+}
+
+.skill-card h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: white;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+/* =============== EDUCATION =============== */
+.education {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.education h1 {
+    margin-bottom: 20px;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.education h1 .icon-education {
+    margin-right: 10px;
+}
+
+.education h1 span {
+    color: #BDB7E9;
+}
+
+.education p {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 2.5rem var(--main-color);
+    text-align: center;
+    flex: 1;
+    max-width: 45%;
+}
+.card:hover{
+    box-shadow: 0 0 2.5rem var(--main-color), 0 0 5rem var(--main-color), 0 0 10rem var(--main-color);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card h1 {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.card p {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    font-size: 1em;
+    color:var(--main-color);
+}
+
+/* =============== PROJECTS =============== */
+.projects {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-color);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects h1 {
+    margin-bottom: 20px;
+    font-size: 4.5em;
+    font-weight: bold;
+    text-align: center;
+}
+.projects h1 span {
+    color: var(--main-color);
+}
+.projects-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.projects-container .card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: var(--bg-color);
+    transition: 0.5s;
+}
+.projects-container .card:hover{
+    height: 400px;
+}
+.projects-container .card .imgBx{
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.projects-container .card:hover .imgBx{
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px var(--bg-color);
+}
+.projects-container .card .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projects-container .card .content-pro{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.projects-container .card:hover .content-pro{
+    top: 150px;
+    height:250px;
+}
+.projects-container .card .content-pro h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+}
+.projects-container .card .content-pro p{
+    color: var(--main-color);
+    font-size: 1.5em;
+}
+.projects-container .card .content-pro a{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+}
+.projects-container .card .content-pro a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+.projects a{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+}
+.projects a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+
+/* =============== EXPERIENCE =============== */
+.experience{
+    padding: 7rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 100vh;
+    background-color: white;
+}
+.experience .heading{
+    font-size: 5rem;
+    color: var(--main-color);
+    margin-bottom: 7rem;
+}
+.experience .timeline-items{
+    max-width: 75rem;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.experience .timeline-items::before{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--second-bg-color);
+    left: calc(50% - 1px);
+}
+.experience .timeline-items .timeline-item{
+    margin-bottom: 4rem;
+    width: 100%;
+    position: relative;
+}
+.experience .timeline-items .timeline-item:last-child{
+    margin-bottom: 0;
+}
+.experience .timeline-items .timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.experience .timeline-items .timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+    text-align: left;
+}
+.experience .timeline-items .timeline-item .timeline-dot{
+    position: absolute;
+    left: calc(50% - 8px);
+    top: 10px;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+.experience .timeline-items .timeline-item .timeline-date{
+    color: var(--second-bg-color);
+    font-size: 1.7rem;
+    font-weight:600;
+}
+.experience .timeline-items .timeline-item .timeline-content{
+    padding: 1rem;
+    width: 35rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+    transition: .5s ease-in-out;
+    background-color: var(--bg-color);
+}
+.experience .timeline-items .timeline-item .timeline-content:hover{
+    cursor: pointer;
+    scale: 1.1;
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+}
+.experience .timeline-items .timeline-item .timeline-content h3{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+.experience .timeline-items .timeline-item .timeline-content p{
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 2;
+    text-transform: capitalize;
+}
+.experience a{
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+}
+.experience a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+
+/* ============== TESTIMONIALS ============== */
+.testimonials{
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 7rem 7%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.testimonials .heading {
+    color: var(--main-color);
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.testimonials .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem 0;
+}
+.testimonials .box-container .box{
+    background-color: var(--bg-color);
+    border-radius: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+    padding: 3rem 1rem;
+    width: 30rem;
+    border: .1rem solid var(--main-color);
+}
+.testimonials .box-container .box img{
+    height: 8rem;
+    width: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: .1rem .5rem .1rem var(--main-color);
+    border: .2rem solid var(--main-color);
+}
+.testimonials .box-container .box h3{
+    color: var(--text-color);
+    font-size: 2rem;
+}
+.testimonials .box-container .box p{
+    color: var(--main-color);
+    font-size: 1.2rem;
+    line-height: 2;
+    text-transform: capitalize;
+}
+.testimonials .box-container .box .stars i{
+    color: gold;
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+.testimonials .box-container .box:hover{
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+    transform: translateY(-2rem);
+    cursor: pointer;
+}
+
+/* ============== CONTACT ============== */
+.contact {
+    padding: 7rem 7%;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    
+}
+
+.contact h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.contact h2 span {
+    color: var(--main-color);
+}
+
+.contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 15px 45px var(--bg-color);
+    border-radius: 5px;
+    text-transform: lowercase;
+}
+
+.contact-image {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.contact-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-right: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-transform: lowercase;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: lowercase;
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--second-bg-color);
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px 10px 10px 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #8e44ad;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    color: var(--main-color);
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border: .2rem solid var(--main-color);
+    border-radius: 3rem;
+}
+
+button:hover {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    box-shadow: .1rem .5rem 1rem var(--main-color);
+}
+
+button i {
+    margin-left: 10px;
+}
+
+/* ============== FOOTER ============== */
+.footer{
+    background-color: var(--second-bg-color);
+    padding: 5rem 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer .icons i{
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 0 1rem;
+}
+.footer .icons i:hover{
+    color: var(--main-color);
+}
+.footer .navbar{
+    margin: 2rem 0;
+}
+.footer .navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-weight: 500;
+    margin: 2rem 1rem;
+}
+.footer .navbar a:hover{
+    color: var(--main-color);
+    text-decoration: underline;
+}
+hr {
+    border: 1px solid white;
+    width: 55%;
+    margin: 20px auto;
+}
+.footer .credit p{
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-transform: capitalize;
+}
+.footer .credit p i,
+.footer .credit p span{
+    color: var(--main-color);
+}
